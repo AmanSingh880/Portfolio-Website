@@ -1,95 +1,209 @@
-img{
-    border: 0px solid white;
-    border-radius: 50%;
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    margin: 0px;
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.8;
 }
-h4,h2{
-    margin: 0%;
-}
-.h1233{
-    margin: 0px;
-}
-.a1{
-    background-color: rgb(69, 70, 70);
+
+/* Navbar styles */
+.a1 {
+    background-color: #1e1e1e;
     display: flex;
     justify-content: center;
-    color: aliceblue;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
-.as{
-    color: aliceblue;
-    text-decoration: none;
 
+.a1:hover {
+    background-color: #181818;
 }
-.a11{
-    margin-left: 10px;
-    margin-right: 10px;
+
+.a11 {
+    margin: 0 20px;
 }
-.a2{
-    margin: 0px;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(173, 241, 241, 0.264);
+
+.as {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.a21{
-    padding: 10%;
-    padding-right: 1%;
-    margin: 0px;
-    padding-right: 5%;
-    /* width: 80%; */
-    height: 100%;
-}
-.a22{
-    padding-left: 15%;
-    padding-top: 10%;
-    padding-right: 10%;
-    margin: 0px;
-    /* width: 20%; */
-    height: 100%
-}
-.a3pre{
-    padding-top: 5%;
-    padding-left: 10%;
-    background-color: rgba(128, 133, 133, 0.408);
-    margin: 0%;
-}
-.a3{
-    display: flex;
-    padding: 10%;
-    padding-top: 0%;
-    margin: 0px;
-    height: 100%;
-    padding-bottom: 5%;
-    background-color: rgba(128, 133, 133, 0.408);
-}
-.pic1{
-    border: 3px solid rgba(173, 241, 241, 0.095);
-    border-radius: 30px 0px 30px 0;
-}
-.a4{
-    padding: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color: rgba(182, 97, 155, 0.326);
-}
-.a5{
-    padding: 10%;
-    padding-top: 2%;
-    padding-bottom: 3%;
-    background-color: rgba(92, 142, 228, 0.404);
-}
-p{
-    font-size: large;
-}
-.a51{
-    margin-top: 7%;
-}
-.a52{
-    margin-top: 9%;
-}
-.t34{
-    margin-top: 1px;
+
+.as:hover {
+    background-color: #ff5722;
     color: white;
+}
+
+/* Hero section (Introduction) */
+.a2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+    min-height: 90vh;
+    background: linear-gradient(135deg, #3b8d99, #6b6e9c);
+    color: white;
+    animation: slideIn 1.2s ease-in-out forwards;
+}
+
+.a21 h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+.a21 h4 {
+    margin-top: 20px;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Profile image styling */
+.pic1 {
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pic1:hover {
+    transform: scale(1.05);
+}
+
+/* Skills section */
+.a3pre {
+    padding: 2%;
+    background-color: #282c34;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.a3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 5% 10%;
+    background-color: #f5f5f5;
+}
+
+.a3 h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.a3 ul {
+    list-style: none;
+    line-height: 2;
+}
+
+/* Projects section */
+.a4 {
+    padding: 5%;
+    background-color: #eee;
+    text-align: center;
+}
+
+.a4 h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.a4 a {
+    color: #3b8d99;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.a4 a:hover {
+    color: #ff5722;
+}
+
+/* Contact section */
+.a5 {
+    padding: 5%;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+.a6 a {
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.a6 a:hover {
+    background-color: #333;
+}
+
+.t34 {
+    margin-top: 20px;
+    color: white;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .a2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .a3 {
+        grid-template-columns: 1fr;
+    }
+
+    .pic1 {
+        width: 100%;
+        height: auto;
+    }
 }
